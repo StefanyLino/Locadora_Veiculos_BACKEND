@@ -48,11 +48,23 @@ class Locadora {
         if (!is_dir($dir)){
             mkdir($dir, 0777, true);
         }
-
-        file_put_contents(ARQUIVO_JSON, json_encode($dados, JSON_PRETTY_PRINT));
-
-       }
     }
+        file_put_contents(ARQUIVO_JSON, json_encode($dados, JSON_PRETTY_PRINT));
+       
+    }
+
+    // Adicionar novo veículo
+    public function adicionarVeiculo(Veiculo $veiculo):void{
+        $this->veiculos[] = $veiculo;
+
+        $this->salvarVeiculos();
+    }
+
+    // Remover veículo
+    // Alugar veículo por n dias
+    // Devolver veículo
+    // Retornar a lista de veículos
+    // Calcular previsão do valor
 }
 
 ?>
