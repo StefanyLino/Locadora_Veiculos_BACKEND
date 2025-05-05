@@ -5,13 +5,6 @@ O QUE USEI:
 1. PHP e JSON
   Utilizei conceitos de PHP e JSON para armazenar, manipular e receber dados diferentes.<br>
   ```
-  <?php
-namespace Models;
-use Interfaces\Locavel;
-
-// Classe que representa um carro
-
-class Carro extends Veiculo implements Locavel{
 
     public function calcularAluguel(int $dias): float 
     {
