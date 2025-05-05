@@ -3,7 +3,7 @@ Para a continuação do desenvolvimento do projeto SCRUM, continuei o projeto an
 <hr>
 O QUE USEI:
 1. PHP e JSON
-  Utilizei conceitos de PHP e JSON para armazenar, manipular e receber dados diferentes.
+  Utilizei conceitos de PHP e JSON para armazenar, manipular e receber dados diferentes.<br>
   ```
   <?php
 namespace Models;
