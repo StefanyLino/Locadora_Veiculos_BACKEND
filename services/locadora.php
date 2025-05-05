@@ -100,10 +100,39 @@ class Locadora {
         return "Veículo não disponível";
     }
 
-
     // Devolver veículo
+    public function devolverVeiculo(string $modelo) : string{
+        // Percorrer a lista
+        foreach($this->veiculos as $veiculo){
+
+            if($veiculo->getModelo === $modelo && !$veiculo->isDisponivel()){
+
+                // Disponibilizar o veículo
+                $mensagem = $veiculo->devolverVeiculo();
+
+                $this->salvarVeiculos();
+                return $mensagem;
+
+            }
+        }
+        
+        return "Veículo já disponível ou não encontrado";
+    }
+
     // Retornar a lista de veículos
+    public function listarVeiculos():array{
+        return $this->veiculos;
+    }
+
     // Calcular previsão do valor
+    public function calcularPrevisaoAluguel(string $tipo, int $dias): float{
+        if ($tipo == 'Carro'){
+            return (new Carro('','')) -> calcularAluguel($dias);
+        }
+        return (new Moto('','')) -> calcularAluguel($dias); 
+    }
+
+   
 }
 
 ?>
