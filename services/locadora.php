@@ -61,7 +61,46 @@ class Locadora {
     }
 
     // Remover veículo
+    public function deletarVeiculo(string $modelo, string $placa): string{
+        foreach ($this->veiculos as $key => $veiculo){
+            // Verifica se o modelo e a placa são correspondentes
+            if($veiculo->getModelo() === $modelo && $veiculo->getPlaca() === $placa){
+                // Remove o veículo do array
+                unset($this->veiculos[$key]);
+
+                // Reorganizar os índices
+                // Recebe e manda para ele mesmo
+                $this->veiculos = array_values($this->veiculos);
+
+                // Salvar o novo estado
+                $this->salvarVeiculos();
+                return "Veículo '{$modelo}' removido com sucesso!";
+            }
+        }
+        return "Veículo não encontrado!";
+    }
     // Alugar veículo por n dias
+    public function alugarVeiculo(string $modelo, int $dias = 1): string{
+        // Percorre a lista de veículos
+        foreach($this->veiculos as $veiculo){
+            if($veiculo->getModelo() === $modelo && $veiculo->isDisponivel()){
+
+                // Calcular valor do aluguel
+                $valorAluguel = $veiculo->calcularALuguel($dias);
+
+                // Marcar como indisponível
+                $mensagem = $veiculo->alugar();
+
+                $this->salvarVeiculos();
+
+                return $mensagem . "Valor do aluguel: R$" . number_format($valorAluguel, 2, ',','.'); 
+            }
+        }
+
+        return "Veículo não disponível";
+    }
+
+
     // Devolver veículo
     // Retornar a lista de veículos
     // Calcular previsão do valor
