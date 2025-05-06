@@ -25,12 +25,12 @@ class Auth{
             $this -> usuarios = [
                 [
                     'username' => 'admin', 
-                    'password' => password_hash('admin123', PASSWORD_DEFAULT),
+                    'password' => password_hash('123', PASSWORD_DEFAULT),
                     'perfil' => 'admin'
                 ],
                 [
                     'username' => 'usuario', 
-                    'password' => password_hash('usuario123', PASSWORD_DEFAULT),
+                    'password' => password_hash('123', PASSWORD_DEFAULT),
                     'perfil' => 'usuario'
                 ],
 
@@ -72,7 +72,7 @@ class Auth{
     // Verificar se o usuário está logado
 
     public static function verificarLogin():bool{
-        return isset($_SESSION['auth']) && $_SESSION['auth']['perfil'] === true;
+        return isset($_SESSION['auth']) && $_SESSION['auth']['logado'] === true;
     }
 
     public static function isPerfil(string $perfil):bool{
