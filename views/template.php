@@ -181,6 +181,7 @@ $usuario = Auth::getUsuario();
                                 <label class="form-label">Quantidade de Dias</label>
                                 <input type="number" name="dias_calculo" class="form-control" value="1" required>
                             </div>
+                          
                             <button type="submit" name="calcular" class="btn btn-info w-100">Calcular Previsão</button>
                         </form>
                     </div>
