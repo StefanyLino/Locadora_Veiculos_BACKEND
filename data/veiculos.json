@@ -3,7 +3,7 @@
         "tipo": "Moto",
         "modelo": "Harley Davidson",
         "placa": "BBB8B88",
-        "disponivel": true
+        "disponivel": false
     },
     {
         "tipo": "Carro",
