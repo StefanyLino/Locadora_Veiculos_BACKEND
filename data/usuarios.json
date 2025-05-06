@@ -8,5 +8,10 @@
         "username": "usuario",
         "password": "$2y$12$z1finJAqi7uzIyELV6.L1um7f5ucVT0g4G5Z205LPbekmVye5.8Eu",
         "perfil": "usuario"
+    },
+    {
+        "username": "fany",
+        "password": "123",
+        "perfil": "fany"
     }
 ]
