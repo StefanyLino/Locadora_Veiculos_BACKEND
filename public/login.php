@@ -21,7 +21,7 @@ $auth = new Auth();
 // Verificar se já foi autenticado
 if(Auth::verificarLogin()){
     // Direcionar usuário para a tela principal
-    header('Location: /index.php');
+    header('Location: index.php');
     exit;
 }
 
@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
 
     // Se a verificação na tela de login receber os dados de NOME e SENHA, ou envia para a outra tela, ou mostra a mensagem de erro
     if($auth->login($username, $password)){
-        header('Location: ./../index.php');
+        header('Location: index.php');
         exit;
     } else {
         $mensagem = 'Falha ao executar o login! Verifique se o usuário e a senha estão corretos.';
