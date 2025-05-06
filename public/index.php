@@ -15,14 +15,14 @@ use Models\{Carro, Moto};
 
 // Verificar se o usuário está logado
 if(!Auth::verificarLogin()){
-    header('Location: /login.php');
+    header('Location: login.php');
     exit;
 }
 
 // Condição para logout
 if (isset($_GET['logout'])){
     (new Auth())->logout();
-    header('Location: /login.php');
+    header('Location: login.php');
     exit;
 }
 
@@ -76,4 +76,4 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 }
 
 renderizar:
-require_once __DIR__ . '/../view/template.php';
+require_once __DIR__ . '/../views/template.php';
