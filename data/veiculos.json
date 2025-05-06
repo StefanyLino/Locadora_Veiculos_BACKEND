@@ -9,12 +9,12 @@
         "tipo": "Carro",
         "modelo": "Ferrari",
         "placa": "AAA7A77",
-        "disponivel": false
+        "disponivel": true
     },
     {
         "tipo": "Carro",
         "modelo": "Civic G9",
         "placa": "BBB3B33",
-        "disponivel": false
+        "disponivel": true
     }
 ]
