@@ -10,5 +10,11 @@
         "modelo": "Ferrari",
         "placa": "AAA7A77",
         "disponivel": false
+    },
+    {
+        "tipo": "Carro",
+        "modelo": "Civic G9",
+        "placa": "BBB3B33",
+        "disponivel": false
     }
 ]
